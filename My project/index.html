@@ -1,0 +1,277 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+<meta charset="UTF-8" /> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+<meta name="description" content="Marina Travel – responsive tourism website built with HTML, CSS, JavaScript, Bootstrap and hosted on GitHub Pages." /> 
+
+<meta name="keywords" content="Marina Travel, tourism, tours, travel, bootstrap website" /> 
+
+<title>Marina Travel | Home</title> 
+
+ 
+
+<!-- Bootstrap CSS --> 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" /> 
+
+ 
+
+<style>
+body { padding-top: 70px; }
+
+footer {
+  background: #0d6efd;
+  color: #fff;
+  padding: 20px 0;
+}
+
+/* HERO WITH BACKGROUND IMAGE */
+.hero {
+  background: url("images/ship.jpg") center/cover no-repeat;
+  padding: 120px 20px;
+  color: rgb(234, 235, 239);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 1, 9, 0.477);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
+
+</head> 
+
+<body> 
+
+ 
+
+<!-- Navigation --> 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"> 
+
+<div class="container"> 
+
+<a class="navbar-brand" href="index.html">Marina Travel</a> 
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"> 
+
+<span class="navbar-toggler-icon"></span> 
+
+</button> 
+
+<div class="collapse navbar-collapse" id="navMenu"> 
+
+<ul class="navbar-nav ms-auto"> 
+
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li> 
+
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li> 
+
+<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li> 
+
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> 
+
+</ul> 
+
+</div> 
+
+</div> 
+
+</nav> 
+
+ 
+
+<!-- Hero Section --> 
+
+<section class="hero text-center"> 
+
+<div class="container"> 
+
+<h1 class="mb-3">Explore the Ocean with Marina Travel</h1> 
+
+<p class="lead">Professional tourism services designed for unforgettable sea adventures.</p> 
+
+<button class="btn btn-primary mt-3" onclick="showWelcome()">Learn More</button> 
+
+</div> 
+
+</section> 
+
+ 
+
+<!-- Services Section -->
+<section class="container my-5">
+  <h1 class="text-center mb-5">Our Services</h1>
+
+  <div class="row g-4">
+
+    <!-- Island Tours -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/island.jpg" class="card-img-top" alt="Island Tours">
+        <div class="card-body">
+          <h5 class="card-title">Island Tours</h5>
+          <p class="card-text">
+            Guided island tours offering breathtaking tropical views, cultural exploration,
+            and relaxing beach experiences. Perfect for families, couples, and solo travelers.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cruise Trips -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/cruise.jpg" class="card-img-top" alt="Cruise Trips">
+        <div class="card-body">
+          <h5 class="card-title">Cruise Trips</h5>
+          <p class="card-text">
+            Luxury cruise trips with professional crews, comfortable cabins,
+            onboard dining, and unforgettable ocean journeys.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diving Experience -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <img src="images/diving.jpg" class="card-img-top" alt="Diving Experience">
+        <div class="card-body">
+          <h5 class="card-title">Diving Experiences</h5>
+          <p class="card-text">
+            Safe and guided scuba diving programs led by certified instructors,
+            allowing you to explore vibrant marine life and coral reefs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+ 
+
+<!-- Contact Form --> 
+
+<section class="container my-5"> 
+
+<h2 class="text-center mb-4">Contact Us</h2> 
+
+<form onsubmit="return validateForm()" class="mx-auto" style="max-width:600px;"> 
+
+<div class="mb-3"> 
+
+<label class="form-label">Name</label> 
+
+<input type="text" id="name" class="form-control" /> 
+
+</div> 
+
+<div class="mb-3"> 
+
+<label class="form-label">Email</label> 
+
+<input type="email" id="email" class="form-control" /> 
+
+</div> 
+
+<div class="mb-3"> 
+
+<label class="form-label">Message</label> 
+
+<textarea class="form-control" rows="4"></textarea> 
+
+</div> 
+
+<button type="submit" class="btn btn-primary w-100">Send Message</button> 
+
+</form> 
+
+</section> 
+
+ 
+
+<!-- Footer --> 
+
+<footer class="text-center"> 
+
+<div class="container"> 
+
+<p class="mb-1">© 2025 Marina Travel</p> 
+
+<small>Built with HTML, CSS, JavaScript & Bootstrap | Hosted on GitHub Pages</small> 
+
+</div> 
+
+</footer> 
+
+ 
+
+<!-- Bootstrap JS --> 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+ 
+
+<!-- JavaScript Functions --> 
+
+<script> 
+
+// Function 1: Welcome interaction 
+
+function showWelcome() { 
+
+alert("Welcome to Marina Travel! Explore our services to plan your next adventure."); 
+
+} 
+
+ 
+
+// Function 2: Form validation 
+
+function validateForm() { 
+
+const name = document.getElementById('name').value; 
+
+const email = document.getElementById('email').value; 
+
+if (name === '' || email === '') { 
+
+alert('Please fill in all required fields.'); 
+
+return false; 
+
+} 
+
+alert('Thank you for contacting Marina Travel!'); 
+
+return true; 
+
+} 
+
+</script> 
+
+ 
+
+</body> 
+
+</html> 
+
+ 
